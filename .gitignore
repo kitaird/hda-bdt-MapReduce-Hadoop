@@ -1,3 +1,7 @@
 *.class
 output/*
 target
+.idea/sonarlint
+.idea/libraries
+.idea/shelf
+.idea/ZeppelinRemoteNotebooks
