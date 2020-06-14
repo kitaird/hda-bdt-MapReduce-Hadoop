@@ -1,0 +1,17 @@
+
+N	java:S106b"9Replace this use of System.out or System.err by a logger.(­Ç®
+N	java:S106d"9Replace this use of System.out or System.err by a logger.(Õ×ªş
+`
+java:S1124!"EReorder the modifiers to comply with the Java Language Specification.(——ë ùÿÿÿÿ
+U
+java:S1161$":Add the "@Override" annotation above this method signature(Ğ±­÷ùÿÿÿÿ
+E
+java:S3740)"/Provide the parametrized type for this generic.(–Æ¤Ò
+S	java:S106a"9Replace this use of System.out or System.err by a logger.(Úşçºøÿÿÿÿ
+G
+java:S1153b"1Directly append the argument of String.valueOf().(­Ç®
+U
+java:S11617":Add the "@Override" annotation above this method signature(‰½È‡úÿÿÿÿ
+H
+java:S1481+"2Remove this unused "ratingsObject" local variable.(ï»ì
+N	java:S106C"9Replace this use of System.out or System.err by a logger.(íÆêõ
