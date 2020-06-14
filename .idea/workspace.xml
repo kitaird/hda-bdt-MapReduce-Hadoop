@@ -43,7 +43,7 @@
       <recent name="$PROJECT_DIR$/input/wordcount" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.RatingsCount">
+  <component name="RunManager" selected="Application.WordCount">
     <configuration name="RatingsCount" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hda.bdt.RatingCounter" />
       <module name="MapReduce" />
