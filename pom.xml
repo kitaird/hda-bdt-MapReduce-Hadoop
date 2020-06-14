@@ -36,7 +36,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>hda.bdt.WordCount</mainClass>
+              <mainClass>hda.bdt.impl.WordCount</mainClass>
             </manifest>
           </archive>
         </configuration>
