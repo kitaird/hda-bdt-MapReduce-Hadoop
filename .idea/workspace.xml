@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="98364018-fe22-4b67-a1d2-fbdc66853864" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1dK1iyFJUNYw4GIgV4Bw9saF0J8" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/output/wordcount" />
+      <recent name="$PROJECT_DIR$/input/wordcount" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.RatingsCount">
+    <configuration name="RatingsCount" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hda.bdt.RatingCounter" />
+      <module name="MapReduce" />
+      <option name="PROGRAM_PARAMETERS" value="input/ratingcounter/ output/ratingcounter/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WordCount" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hda.bdt.WordCount" />
+      <module name="MapReduce" />
+      <option name="PROGRAM_PARAMETERS" value="input/wordcount/ output/wordcount/" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.WordCount" />
+      <item itemvalue="Application.RatingsCount" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="98364018-fe22-4b67-a1d2-fbdc66853864" name="Default Changelist" comment="" />
+      <created>1592159101993</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1592159101993</updated>
+      <workItem from="1592159103142" duration="3434000" />
+      <workItem from="1592163129681" duration="43000" />
+      <workItem from="1592163342268" duration="2927000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="836" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1592167064861">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="836" y="211" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1592167064861" />
+    <state x="669" y="320" width="913" height="503" key="#xdebugger.evaluate" timestamp="1592161942893">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="669" y="320" width="913" height="503" key="#xdebugger.evaluate/72.27.1848.1053@72.27.1848.1053" timestamp="1592161942893" />
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom" timestamp="1592166243825">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1592166243825" />
+    <state width="1802" height="275" key="GridCell.Tab.0.center" timestamp="1592166243824">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.center/72.27.1848.1053@72.27.1848.1053" timestamp="1592166243824" />
+    <state width="1802" height="275" key="GridCell.Tab.0.left" timestamp="1592166243824">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.left/72.27.1848.1053@72.27.1848.1053" timestamp="1592166243824" />
+    <state width="1802" height="275" key="GridCell.Tab.0.right" timestamp="1592166243824">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="275" key="GridCell.Tab.0.right/72.27.1848.1053@72.27.1848.1053" timestamp="1592166243824" />
+    <state width="1802" height="340" key="GridCell.Tab.1.bottom" timestamp="1592162772789">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="340" key="GridCell.Tab.1.bottom/72.27.1848.1053@72.27.1848.1053" timestamp="1592162772789" />
+    <state width="1802" height="340" key="GridCell.Tab.1.center" timestamp="1592162772788">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="340" key="GridCell.Tab.1.center/72.27.1848.1053@72.27.1848.1053" timestamp="1592162772788" />
+    <state width="1802" height="340" key="GridCell.Tab.1.left" timestamp="1592162772788">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="340" key="GridCell.Tab.1.left/72.27.1848.1053@72.27.1848.1053" timestamp="1592162772788" />
+    <state width="1802" height="340" key="GridCell.Tab.1.right" timestamp="1592162772788">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="1802" height="340" key="GridCell.Tab.1.right/72.27.1848.1053@72.27.1848.1053" timestamp="1592162772788" />
+    <state x="529" y="211" width="924" height="691" key="Maven.ArtifactSearchDialog" timestamp="1592166153776">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state x="529" y="211" width="924" height="691" key="Maven.ArtifactSearchDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1592166153776" />
+    <state width="924" height="526" key="XDebugger.FullValuePopup" timestamp="1592161477701">
+      <screen x="72" y="27" width="1848" height="1053" />
+    </state>
+    <state width="924" height="526" key="XDebugger.FullValuePopup/72.27.1848.1053@72.27.1848.1053" timestamp="1592161477701" />
+  </component>
+</project>
