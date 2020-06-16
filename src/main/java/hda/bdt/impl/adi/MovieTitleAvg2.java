@@ -45,7 +45,7 @@ public class MovieTitleAvg2 extends Configured implements Tool {
                     context.write(word, new IntWritable(rating.intValue()));
                 }
             } catch (ParseException ex) {
-                Logger.getLogger(RatingCounter.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MovieTitleAvg2.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

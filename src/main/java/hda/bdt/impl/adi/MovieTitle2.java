@@ -45,7 +45,7 @@ public class MovieTitle2 extends Configured implements Tool {
                     context.write(word, new IntWritable(((Long) ratingsObject.get("userId")).intValue()) );
                 }
             } catch (ParseException ex) {
-                Logger.getLogger(RatingCounter.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MovieTitle2.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

@@ -47,7 +47,7 @@ public class MovieTitle1 extends Configured implements Tool {
                     }
                 }
             } catch (ParseException ex) {
-                Logger.getLogger(RatingCounter.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MovieTitle1.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

@@ -42,7 +42,7 @@ public class MovieTitleAvg1 extends Configured implements Tool {
                 double avgRating = ratingsArrayObject.stream().map(o -> ((JSONObject) o).get("rating")).mapToLong(Long.class::cast).average().orElse(0);
                 context.write(word, new DoubleWritable(avgRating));
             } catch (ParseException ex) {
-                Logger.getLogger(RatingCounter.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(MovieTitleAvg1.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }

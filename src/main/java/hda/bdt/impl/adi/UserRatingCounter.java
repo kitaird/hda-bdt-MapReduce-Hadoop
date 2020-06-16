@@ -45,7 +45,7 @@ public class UserRatingCounter extends Configured implements Tool {
                     context.write(word, one);
                 }
             } catch (ParseException ex) {
-                Logger.getLogger(RatingCounter.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(UserRatingCounter.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
     }
