@@ -39,8 +39,14 @@ public class MovieTitleAvg1 extends Configured implements Tool {
                 JSONObject movieObject = (JSONObject) jsonParser.parse(value.toString());
                 JSONArray ratingsArrayObject = (JSONArray) movieObject.get("ratings");
                 word.set(movieObject.get("title").toString());
-                double avgRating = ratingsArrayObject.stream().map(o -> ((JSONObject) o).get("rating")).mapToLong(Long.class::cast).average().orElse(0);
-                context.write(word, new DoubleWritable(avgRating));
+                double sum = 0;
+                double counter = 0;
+                for(Object o: ratingsArrayObject){
+                    double rating = Double.parseDouble(((JSONObject) o).get("rating").toString());
+                    sum += rating;
+                    counter++;
+                }
+                context.write(word, new DoubleWritable(sum/counter));
             } catch (ParseException ex) {
                 Logger.getLogger(MovieTitleAvg1.class.getName()).log(Level.SEVERE, null, ex);
             }

@@ -30,7 +30,7 @@ public class MovieTitleAvg2 extends Configured implements Tool {
         System.exit(exitCode);
     }
 
-    public static class MapperImpl extends Mapper<Object, Text, Text, IntWritable> {
+    public static class MapperImpl extends Mapper<Object, Text, Text, DoubleWritable> {
         private final Text word = new Text();
 
         @Override
@@ -41,8 +41,8 @@ public class MovieTitleAvg2 extends Configured implements Tool {
                 JSONArray ratingsArrayObject = (JSONArray) movieObject.get("ratings");
                 word.set(movieObject.get("title").toString());
                 for(Object o: ratingsArrayObject){
-                    Long rating = (Long)((JSONObject) o).get("rating");
-                    context.write(word, new IntWritable(rating.intValue()));
+                    double rating = Double.parseDouble(((JSONObject) o).get("rating").toString());
+                    context.write(word, new DoubleWritable(rating));
                 }
             } catch (ParseException ex) {
                 Logger.getLogger(MovieTitleAvg2.class.getName()).log(Level.SEVERE, null, ex);
@@ -50,14 +50,14 @@ public class MovieTitleAvg2 extends Configured implements Tool {
         }
     }
 
-    public static class ReducerImpl extends Reducer<Text, IntWritable, Text, DoubleWritable> {
+    public static class ReducerImpl extends Reducer<Text, DoubleWritable, Text, DoubleWritable> {
         private final DoubleWritable result = new DoubleWritable();
 
         @Override
-        public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
+        public void reduce(Text key, Iterable<DoubleWritable> values, Context context) throws IOException, InterruptedException {
             double sum = 0;
             double counter = 0;
-            for (IntWritable val : values) {
+            for (DoubleWritable val : values) {
                 sum += val.get();
                 counter++;
             }
@@ -87,7 +87,7 @@ public class MovieTitleAvg2 extends Configured implements Tool {
 
         // set the key and value class
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setOutputValueClass(DoubleWritable.class);
         job.setOutputFormatClass(TextOutputFormat.class);
 
         // set the mapper and reducer class
