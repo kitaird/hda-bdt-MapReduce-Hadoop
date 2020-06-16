@@ -3,8 +3,8 @@ package hda.bdt;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
+import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.Mapper;
 import org.apache.hadoop.mapreduce.Reducer;
@@ -18,13 +18,17 @@ public abstract class DefaultBDTConfigured extends Configured implements Tool {
     private static Class<? extends DefaultBDTConfigured> impl;
     private static Class<? extends Mapper> mapper;
     private static Class<? extends Reducer> reducer;
+    private static Class<? extends WritableComparable> writable;
+
 
     protected static void setUp(final Class<? extends DefaultBDTConfigured> i,
                                 final Class<? extends Mapper> m,
-                                final Class<? extends Reducer> r) {
+                                final Class<? extends Reducer> r,
+                                final Class<? extends WritableComparable> w) {
         impl = i;
         mapper = m;
         reducer = r;
+        writable = w;
     }
 
     @Override
@@ -47,7 +51,7 @@ public abstract class DefaultBDTConfigured extends Configured implements Tool {
 
         // set the key and value class
         job.setOutputKeyClass(Text.class);
-        job.setOutputValueClass(IntWritable.class);
+        job.setOutputValueClass(writable);
         job.setOutputFormatClass(TextOutputFormat.class);
 
         // set the mapper and reducer class
