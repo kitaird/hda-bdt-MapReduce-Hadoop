@@ -37,12 +37,11 @@ public abstract class DefaultBDTConfigured extends Configured implements Tool {
             System.err.printf("Usage: %s needs two arguments, input and output files%n", getClass().getSimpleName());
             return -1;
         }
-
         // when implementing tool
         Configuration conf = this.getConf();
 
         // create job
-        Job job = Job.getInstance(conf, "RatingCounter");
+        Job job = Job.getInstance(conf, getClass().getSimpleName());
         job.setJarByClass(impl);
 
         // set the input and output path

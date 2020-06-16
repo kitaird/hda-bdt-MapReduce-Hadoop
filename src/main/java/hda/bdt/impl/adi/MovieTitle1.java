@@ -1,4 +1,4 @@
-package hda.bdt.impl;
+package hda.bdt.impl.adi;
 
 import hda.bdt.DefaultBDTConfigured;
 import org.apache.hadoop.io.IntWritable;
@@ -13,19 +13,18 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import java.io.IOException;
-import java.util.Iterator;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class RatingCounter extends DefaultBDTConfigured implements Tool {
+public class MovieTitle1 extends DefaultBDTConfigured implements Tool {
 
     public static void main(String[] args) throws Exception {
-        setUp(RatingCounter.class, MoviesMapper.class, RatingsReducer.class);
-        int exitCode = ToolRunner.run(new RatingCounter(), args);
+        setUp(MovieTitle1.class, MapperImpl.class, ReducerImpl.class, IntWritable.class);
+        int exitCode = ToolRunner.run(new MovieTitle1(), args);
         System.exit(exitCode);
     }
 
-    public static class MoviesMapper extends Mapper<Object, Text, Text, IntWritable> {
+    public static class MapperImpl extends Mapper<Object, Text, Text, IntWritable> {
         private static final IntWritable one = new IntWritable(1);
         private final Text word = new Text();
 
@@ -37,8 +36,10 @@ public class RatingCounter extends DefaultBDTConfigured implements Tool {
                 JSONArray ratingsArrayObject = (JSONArray) movieObject.get("ratings");
                 for (Object o : ratingsArrayObject) {
                     JSONObject ratingsObject = (JSONObject) o;
-                    word.set("SumRatings");
-                    context.write(word, one);
+                    if ((Long) ratingsObject.get("userId") == 10L) {
+                        word.set(movieObject.get("title").toString());
+                        context.write(word, one);
+                    }
                 }
             } catch (ParseException ex) {
                 Logger.getLogger(RatingCounter.class.getName()).log(Level.SEVERE, null, ex);
@@ -46,17 +47,14 @@ public class RatingCounter extends DefaultBDTConfigured implements Tool {
         }
     }
 
-    public static class RatingsReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
-        private final IntWritable result = new IntWritable();
+    public static class ReducerImpl extends Reducer<Text, IntWritable, Text, IntWritable> {
+        private final IntWritable one = new IntWritable(1);
 
         @Override
         public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
-            int sum = 0;
-            for (IntWritable val : values) {
-                sum += val.get();
-            }
-            result.set(sum);
-            context.write(key, result);
+            context.write(key, one);
         }
     }
+
 }
+

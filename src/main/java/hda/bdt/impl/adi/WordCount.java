@@ -1,4 +1,4 @@
-package hda.bdt.impl;
+package hda.bdt.impl.adi;
 
 
 import hda.bdt.DefaultBDTConfigured;
@@ -48,7 +48,7 @@ public class WordCount extends DefaultBDTConfigured implements Tool {
     }
 
     public static void main(final String[] args) throws Exception {
-        setUp(WordCount.class, MyMapper.class, MyReducer.class);
+        setUp(WordCount.class, MyMapper.class, MyReducer.class, IntWritable.class);
         final int returnCode = ToolRunner.run(new Configuration(), new WordCount(), args);
         System.exit(returnCode);
     }
